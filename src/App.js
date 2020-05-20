@@ -3,15 +3,13 @@ import {MemoryRouter,Route} from 'react-router-dom'
 
 import './App.css';
 import Menu from './components/menu'
-import Home from './components/home'
-import Pal from './components/pal'
+import Dictionary from './components/dictionary'
 
 export default function App() {
   return (
     <MemoryRouter>
-       <Menu/>       
-       <Route exact path="/" component={Home}/>
-       <Route path="/pal" component={Pal}/>                     
+       <Menu/>             
+       <Route path="/" component={Dictionary}/>          
     </MemoryRouter>
   );
 }
