@@ -8,7 +8,7 @@ import BurgerIcon from '../assets/icons/burgerIcon'
 export default function Menu() {
     return (
         <div className={styles.menu}>
-            <div className={styles.name}>Shobdo</div>
+            <div className={styles.name}>Shobdartho</div>
         </div>
     )
 }
