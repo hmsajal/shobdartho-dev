@@ -1,15 +1,41 @@
-.menu {
-  height: 12vh;
+.main {  
   width:100%;
   position: fixed;
   z-index: 10;
   top: 0px;
-  background-color: teal; 
-  font-size:40px;
+  background-color: teal;   
+  display:grid;
+  grid-template-rows: 10vh;
+  grid-template-columns: repeat(16,1fr) ;
+}
+
+.select{
+  
+}
+
+.name{
+  grid-column: 5/13;
+  font-size:26px;
   color: white;
   font-weight:bold;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   display:flex;
   justify-content: center;
   align-items: center;
+}
+
+
+@media screen and (min-width:641px){
+  .name{
+    font-size:28px;
+  }
+}
+
+@media screen and (min-width:1025px){
+  .name{
+    font-size: 34px;
+  }
+  .main{
+    grid-template-rows:12vh;
+  }
 }

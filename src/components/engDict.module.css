@@ -1,0 +1,12 @@
+.main{
+    width:60vw;
+    border-top:1px solid #bbb; 
+    padding-top:40px;
+}
+
+li{
+    list-style: none;
+    margin-bottom: 18px;
+    font-size:20px;
+    font-family:comic sans-serif;
+}

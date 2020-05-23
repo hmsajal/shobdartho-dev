@@ -1,22 +1,32 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import axios from 'axios'
+
+import styles from './engDict.module.css'
 
 export default function BngDict(props) { 
     
     let [bnDef,setBnDef] = useState('')
 
-    if(props.value!==''){
-        axios.get('BengaliDictionary.json').then(res=>{
-            for(let i=0;i<=16000;i++){
-                if(props.value===res.data[i].en){
-                    setBnDef(`--  `+res.data[i].bn)                                    
-                }                                                
-            }                        
-        })
-    }
-
+    useEffect(()=>{
+        if(props.value!==''){
+            fetch(`bnDictionary.json`)
+            .then(res=>res.json())
+            .then(json=>{
+                console.log(json)
+                for(let i=0;i<=16000;i++){
+                    if(props.value===json[i].en){
+                        setBnDef(`--  `+json[i].bn);                                                    
+                    }                                                
+                }  
+            })
+            .catch((err)=>{
+                console.log(err)
+            }) 
+        }
+    },[props.value])
+    
     return(
-        <div>
+        <div className={styles.main}>
             {bnDef}
         </div>
     )

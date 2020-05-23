@@ -1,6 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 
+import styles from './engDict.module.css'
+
 export default function EngDict(props) {
     
     let [engDef,setEngDef] = useState([])
@@ -24,11 +26,10 @@ export default function EngDict(props) {
     },[props.value])
 
     return(
-        <div>
+        <div className={styles.main}>
             {
               engDef.map((item,index)=>(
-                    <li key={index+1} style={{listStyle:'none',marginBottom:'10px', fontSize:'20px',
-                                                fontFamily:'comic'}}>
+                    <li key={index+1}>
                         {index+1}. {item}
                     </li>
               ))
