@@ -1,0 +1,12 @@
+.defDiv {
+  position: relative;
+  top: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@media screen and (min-width: 1025px) {
+  .defDiv {
+    top: 47vh;
+  }
+}
