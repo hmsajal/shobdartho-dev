@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import Menu from "../presentation/menu";
-import EngDef from "./engDef";
+import Menu from "./menu";
+import EngDict from "../english/engDict";
 import DataInput from "./dataInput";
 
 export default function Dictionary() {
@@ -18,7 +18,7 @@ export default function Dictionary() {
     >
       <Menu />
       <DataInput getVal={(val) => setWord(val)} />
-      <EngDef word={word} />
+      <EngDict word={word} />
     </div>
   );
 }

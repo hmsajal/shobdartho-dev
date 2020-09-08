@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWikipediaW } from "@fortawesome/free-brands-svg-icons";
 
-import styles from "./dataInput.module.css";
+import styles from "./dataInput.module.scss";
 
-export default function SearchBox(props) {
+export default function DataInput(props) {
   let [value, setValue] = useState("");
   function handleSubmit(event) {
     event.preventDefault();
