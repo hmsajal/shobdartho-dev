@@ -1,10 +1,8 @@
 import React from "react";
 
-import styles from "./engUi.module.scss";
-
-export default function EngUi({ data }) {
+export default function EngDefUi({ data }) {
   return (
-    <div className={styles.defDiv}>
+    <div>
       {Object.keys(data).map((e, ind) => (
         <div key={ind}>
           <h4>{e}</h4>

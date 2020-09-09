@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import Axios from "axios";
 
-import EngUi from "./engUi";
+import EngDefUi from "./engDefUi";
+import ShortInfo from "./shortInfo";
+import styles from "./engDict.module.scss";
 
 export default function EngDict({ word }) {
   let [def, setDef] = useState([]);
@@ -25,7 +27,7 @@ export default function EngDict({ word }) {
 
   useEffect(() => {
     word !== "" &&
-      axios({
+      Axios({
         headers: {
           "x-rapidapi-key":
             "faab4b4011mshf0e7bc0307e81aap1f8b81jsn8e7e870114ee",
@@ -38,5 +40,10 @@ export default function EngDict({ word }) {
       });
   }, [word]);
 
-  return <EngUi data={def} />;
+  return (
+    <div className={styles.main}>
+      <ShortInfo word={word} />
+      <EngDefUi data={def} />
+    </div>
+  );
 }

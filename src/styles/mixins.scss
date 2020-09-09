@@ -1,0 +1,20 @@
+@import "./variables.scss";
+
+@mixin mquery($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin setWidth($device-width, $width) {
+  @media (min-width: $device-width) {
+    width: $width;
+  }
+}
+
+@mixin widthControl {
+  @include setWidth($xs-vp, $defSrch-width-xs);
+  @include setWidth($sm-vp, $defSrch-width-sm);
+  @include setWidth($md-vp, $defSrch-width-md);
+  @include setWidth($lg-vp, $defSrch-width-lg);
+}

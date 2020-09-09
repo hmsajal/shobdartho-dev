@@ -1,52 +1,27 @@
+@import "../../styles/mixins.scss";
+
 .main {
   z-index: 8;
   position: fixed;
   top: 10vh;
-  height: 35vh;
+  height: 10vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: #f9f9f9;
+  box-shadow: 0px 0px 2px 0px #888;
 }
-.searchDiv {
-  height: 5.2vh;
-  display: flex;
-}
-.iconDiv {
+.searchForm {
+  height: 5.3vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  @include widthControl;
+}
+
+.searchForm input {
+  font-size: 20px;
   height: 100%;
-  width: 80px;
-}
-
-input {
-  --inputWidth: 60vw;
-  font-size: 18px;
-  width: var(--inputWidth);
-}
-
-@media screen and (min-width: 401px) {
-  input {
-    --inputWidth: 45vw;
-  }
-}
-
-@media screen and (min-width: 641px) {
-  input {
-    --inputWidth: 35vw;
-  }
-}
-
-@media screen and (min-width: 1101px) {
-  input {
-    --inputWidth: 30vw;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  main {
-    top: 12vh;
-  }
+  width: 100%;
 }

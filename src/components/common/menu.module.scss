@@ -1,9 +1,11 @@
+@import "../../styles/mixins.scss";
+
 .main {
   width: 100%;
   position: fixed;
   z-index: 10;
   top: 0px;
-  background-color: teal;
+  background-color: #a8d5ba;
   height: 10vh;
   display: flex;
   justify-content: center;
@@ -12,23 +14,8 @@
 
 .name {
   font-size: 26px;
-  color: white;
+  color: #359;
   font-weight: bold;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-}
-
-@media screen and (min-width: 641px) {
-  .name {
-    font-size: 28px;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .name {
-    font-size: 34px;
-  }
-  .main {
-    height: 12vh;
-  }
 }

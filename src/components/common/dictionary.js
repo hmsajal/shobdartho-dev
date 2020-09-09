@@ -6,7 +6,6 @@ import DataInput from "./dataInput";
 
 export default function Dictionary() {
   let [word, setWord] = useState("");
-
   return (
     <div
       style={{
